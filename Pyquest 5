@@ -12,6 +12,37 @@ print('-' * 40)
 print('Lista dos maiores de 1,70')
 print('-' * 40)
 print(lista)'''
+ 
+ 
+# Questão 4
+
+lista = []
+nome = []
+nota = []
+media = []
+for c in range(10):
+    nome.append(str(input('Nome: ')))
+    nota.append(float(input('Nota: ')))
+    media = sum(nota) / 10
+    if nota[c] > media:
+        lista.append(nome[c])
+        lista.append(nota[c])
+print('=' * 40)
+print('Média da turma: {:.2f}'.format(media))
+print()
+print('Alunos com nota acima da média da tuma: ', end='')
+print(lista)
+
+
+#Questão 5
+lista = []
+for c in range(10):
+    lista.append(int(input('Digite um valor:')))
+lista.sort()
+print(f'Os valores em ordem crescente: {lista}')
+lista.sort(reverse=True)
+print(f'Os valores em ordem decrescente: {lista}')
+
 
 # Questão 6
 '''listanum = []
