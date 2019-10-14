@@ -1,0 +1,221 @@
+﻿#Exercicio 1
+tempo = float(input('digite o tempo gasto:'))
+velocidade = int(input('digite a velocidade media:'))
+distancia = tempo * velocidade
+litros_usados= distancia/12
+print('o tempo gasto foi de {} horas'.format(tempo))
+print('A velocidade media foi de {} km/h'.format(velocidade))
+print('A distancia percorrida foi de {} km'.format(distancia))
+print('A quantidade de combustivel foi de {} L'.format(litros_usados))
+
+#Exercicio 2
+sexo1 = int(input('digite a quantidade de alunos do sexo masculino:'))
+sexo2 = int(input('digite a quantidade de alunos do sexo feminino:'))
+totaldealunos= sexo1 + sexo2
+porcentmasc = (totaldealunos * sexo1) / 100
+porcentfemi = (totaldealunos * sexo2) / 100
+print('o total de alunos é {}'.format(totaldealunos))
+print('a porcentagem de alunos masculinos é de {}%'.format(porcentmasc))
+print('a porcentagem de alunas femininas é de {}%'.format(porcentfemi))
+
+#Exercicio 3
+soma= 0.0
+nota1= int(input('digite sua primeira nota:'))
+nota2= int(input('digite sua segunda nota:'))
+media= nota1 + nota2
+if media >= 7:
+    print('aprovado')
+elif media < 7:
+    nota3= int(input('digite sua terceira nota:'))
+    resuf= (nota3 * 2) / 2
+if resuf >= 6:
+    print('aprovado')
+elif resuf < 6:
+    print('reprovado')
+
+#Exercicio 4
+
+semana= int(input('digite um numero:'))
+if semana == 1:
+    print('domingo')
+elif semana == 2:
+    print('segunda')
+elif semana == 3:
+    print('terça')
+elif semana == 4:
+    print('quarta')
+elif semana == 5:
+    print('quinta')
+elif semana == 6:
+    print('sexta')
+elif semana == 7:
+    print('sabado')
+elif semana != 1 and 7:
+    print('Dia invalido')
+
+#Exercicio 5
+
+salario= float(input('Digite seu salário bruto:'))
+sexo= input(' se você for do sexo masculino digite "M", se for do sexo feminino digite "F": ')
+if sexo == 'm':
+    saliq= (salario * 95) / 100
+    print('seu salario liquido é de {}'.format(saliq))
+elif sexo == 'f':
+    saliq= (salario * 97) / 100
+    print('seu salario é de {}'.format(saliq))
+
+#Exercicio 6
+
+print('Teste do aço')
+teste1 = int(input('Digite a % do conteudo de carbono:'))
+teste2 = int(input('Digite a dureza Rokwell:'))
+teste3 = float(input('Digite a tração:'))
+if teste1 < 7 and teste2 > 50 and teste3 > 80.000:
+    print('Grau 10')
+elif teste1 < 7 and teste2 > 50 and teste3 <80.000:
+    print('Grau 9')
+elif teste1 < 7 and teste2 < 50 and teste3 < 80.000:
+    print('Grau 8')
+elif teste2 > 50 and teste1 > 7 and teste3 < 80.000:
+    print('Grau 7')
+elif teste3 > 80.000 and teste1 > 7 and teste2 < 50:
+    print('Grau 7')
+elif teste1 > 7 and teste2 > 50 and teste3 > 80.000:
+    print('Grau 7')
+elif teste1 < 7 and teste2 < 50 and teste3 > 80.000:
+    print('Grau 7')
+
+#Exercicio 7
+
+peso= float(input('Digite seu peso:'))
+altura= float(input('Digite sua altura:'))
+imc= (peso / (altura**2))
+print('Valores fornecidos, Peso= {}kg, Altura {}m, calculo do imc é de {:.2f}'.format(peso, altura, imc)
+
+#Exercicio 8
+
+import math
+x1 = int(input("Digite o valor de x1:"))
+x2 = int(input("Digite o valor de x2:"))
+y1 = int(input("Digite o valor de y1:"))
+y2 = int(input("Digite o valor de y2:"))
+resultado = ((x2 - x1) ** 2) + ((y2 - y1) ** 2)
+resultado1 = math.sqrt(resultado)
+print('{:.2f}'.format(resultado1))
+
+#Exercicio 9
+
+codigo= int(input('Digite o codigo do produto:'))
+quantidade= int(input('digite a quantidade do produto:'))
+if codigo == 100:
+    soma = (quantidade*5.20)
+    print('o valor do seu cachorro-quente é de R${:.2f}'.format(soma))
+elif codigo == 101:
+    soma = (quantidade*5.20)
+    print('o valor do seu Hambúrguer é de R${:.2f}'.format(soma))
+elif codigo == 102:
+    soma = (quantidade*7.30)
+    print('o valor do seu Cheeseburguer é de R${:.2f}'.format(soma))
+elif codigo == 103:
+    soma = (quantidade*5.00)
+    print('o valor do seu Refrigerante é de R${:.2f}'.format(soma))
+
+
+#Exercicio 10
+
+sexo= input("Digite seu sexo (m) para masculino e (f) para feminino:")
+h= float(input('Digite sua altura:'))
+if sexo == 'm':
+    pesoideal= (72.7*h)-58
+    print('seu peso ideal é de {:.2f}kg'.format(pesoideal))
+elif sexo =='f':
+    pesoideal= (62.1*h)-44.7
+    print('seu peso ideal é de {:.2f}kg'.format(pesoideal))
+
+#Exercicio 11
+
+saldo_medio= int(input('Informe seu saldo medio:'))
+if saldo_medio < 200:
+    print('nenhum credito foi concedido')
+elif saldo_medio >= 601:
+    print('seu saldo médio é de {}'.format(saldo_medio))
+    percent3= (saldo_medio * 40) / 100
+    print('o valor de credito é de {}'.format(percent3))
+elif saldo_medio >= 401 and 600:
+    print('seu saldo médio é de {}'.format(saldo_medio))
+    percent2= (saldo_medio * 30) / 100
+    print('o valor de credito é de {}'.format(percent2))
+elif saldo_medio != 201 and 400:
+    print('seu saldo médio é de {}'.format(saldo_medio))
+    percent1= (saldo_medio * 20) / 100
+    print('o valor de credito é de  {}'.format(percent1))
+
+#Exercicio 12
+
+salario_bruto = float(input('Informe seu salário:'))
+inss= (salario_bruto*10) / 100
+ir= (salario_bruto*25) / 100
+sindicato = (salario_bruto*0.5) / 100
+salario_liquido= salario_bruto - (inss + ir + sindicato)
+print('o desconto do INSS é de R${:.2f}'.format(inss))
+print('o desconto do IR é de R${:.2f}'.format(ir))
+print('o desconto do sindicato é de R${:.2f}'.format(sindicato))
+print('o seu salario liquido é de R${:.2f}'.format(salario_liquido))
+
+#Exercicio 13
+num01 = int(input('Digite um valor:'))
+num02 = int(input('Digite um valor:'))
+num03 = int(input('Digite um valor:'))
+if num01 == num02 == num03:
+    print('os numeros são iguais')
+elif num01 > num02 and num01 > num03:
+    maior = num01
+elif num02 > num01 and num02 > num03:
+    maior = num02
+elif num03 > num01 and num03 > num02:
+    maior = num03
+    print('Maior número: {}'.format(maior))
+
+#Exercicio 14
+salario_liquido = int(input('digite o seu salario:'))
+if salario_liquido <= 2000:
+    gratificaçao = (salario_liquido*5) / 100
+    print('seu salario liquido é de R${}'.format(salario_liquido))
+    print('Sua gratificação foi de 5%, o bonus é de R${}'.format(gratificaçao))
+elif salario_liquido > 3000:
+    gratificaçao = (salario_liquido*20) / 100
+    print('seu salario liquido é de R${}'.format(salario_liquido))
+    print('Sua gratificação foi de 20%, o bonus é de R${}'.format(gratificaçao))
+elif salario_liquido > 2500 <= 3000:
+    gratificaçao = (salario_liquido*15) / 100
+    print('seu salario liquido é de R${}'.format(salario_liquido))
+    print('Sua gratificação foi de 15%, o bonus é de R${}'.format(gratificaçao))
+elif salario_liquido == 2000 or 2500:
+    gratificaçao = (salario_liquido*10) / 100
+    print('seu salario liquido é de R${}'.format(salario_liquido))
+    print('Sua gratificação foi de 10%, o bonus é de R${}'.format(gratificaçao))
+
+#Exercicio 15
+
+jogador= input('Jogador 1 escolha pedra, papel ou tesoura:')
+jogador2= input('Jogador 2 escolha pedra, papel ou tesoura:')
+if jogador == 'pedra' and jogador2 == 'tesoura':
+    print('Pedra quebra tesoura')
+    print('O jogador numero 1 ganhou')
+elif jogador == 'tesoura' and jogador2 == 'papel':
+    print('Tesoura corta papel')
+    print('O jogador numero 1 ganhou')
+elif jogador == 'papel' and jogador2 == 'pedra':
+    print('Papel embrulha a pedra')
+    print('O jogador numero 1 ganhou')
+elif jogador2 == 'pedra' and jogador == 'tesoura':
+    print('Pedra quebra tesoura')
+    print('O jogador numero 2 ganhou')
+elif jogador2 == 'tesoura' and jogador == 'papel':
+    print('Tesoura corta papel')
+    print('O jogador numero 2 ganhou')
+elif jogador2 == 'papel' and jogador == 'pedra':
+    print('Papel embrulha a pedra')
+    print('O jogador numero 2 ganhou')
+elif jogador and jogador2 == 'pedra' or 'papel' or 'tesoura':
+    print('Empate')
