@@ -1,0 +1,142 @@
+#Questão 1
+soma= 0.0
+for cont in range (10):
+    preco = float(input('Digite o preço: '))
+    soma += preco
+print('O valor total será {:.2f}' .format(soma))
+
+#Questão 2
+c = 1
+soma = 0.0
+while (c <= 50):
+    c += 1
+    soma += c
+print('O valor total dos numeros será {}' .format(soma))
+
+#Questão 3
+soma = 0
+media = 0
+for cont in range (10):
+    idade = int(input('Digite sua idade: '))
+    soma += idade / 10
+print('A média das idades é {}' .format(soma))
+
+#Questão 4
+totalF = 0
+totalM = 0
+total = 0
+c = 1
+i = 1
+while (i != 0):
+    sexo= input('Digite seu sexo: ')
+    total= total + 1
+    if (sexo == 'M'):
+        totalM+= 1
+    if (sexo == 'F'):
+        totalF+= 1
+    i= int(input('Digite 0 para sair'))
+print('O total masculino será {}'.format(totalM))
+print('O total feminino será {}' .format(totalF))
+print('O total de pessoas vai ser {}' .format(total)) 
+
+#Questão 5
+c = 0
+inf = 0
+sup = 0
+med = 0
+altura= float(input('Digite sua altura: '))
+while altura > 0:
+    c += 1
+    if altura < 1.60 :
+        inf += 1
+    elif altura < 1.80 :
+        sup += 1
+    else:
+        med += 1
+    altura= float(input('Digite sua altura: '))
+    total= inf + sup + med
+print('As pessoas com altura menor que 1.60 são {}' .format(inf))
+print('As pessoas com altura maior que 1.80 são {}' .format(sup))
+print('A média das alturas é {}' .format(med))
+print('O total de pessoas cadastradas foi {}' .format(total))
+
+#Questão 6
+c = 0
+inf = 0
+sup = 0
+idade = int(input('Digite sua idade: '))
+while idade != 0:
+    c += 1
+    if idade < 18:
+        inf += 1
+    elif idade >= 18:
+        sup += 1
+    idade = int(input('Digite sua idade: '))
+pessoasinf = (inf * 100)/c
+pessoassup = (sup * 100)/c
+print('O total de pessoas cadastradas {}' .format(c))
+print('A porcentagem de pessoas com idade inferior a 18 anos é {}' .format(inf))
+print('A porcentagem de pessoas com idade ou superior a 18 anos é {}' .format(sup))
+
+#Questão 7
+num = int(input("Numero: "))
+quant = maior = menor = 0
+
+while num != 0:
+    num = int(input("Numero: "))
+    quant = quant + 1
+    if quant == 1:
+        maior = menor = num
+    else:
+        if num > maior:
+            maior = num
+        if num < menor:
+            menor = num
+print('O número maior é:' ,format(maior))
+
+#Questão 8
+maior = 0
+soma = 0
+media = 0
+for cont in range (10):
+    nome = input('Digite seu nome: ')
+    altura = float(input('Digite sua altura: '))
+    soma += altura / 10
+    if cont == 1:
+        m_alta = altura
+        n_alta = nome
+    else:
+        if altura > maior:
+            maior = m_alta = altura
+            n_alta = nome
+print('A altura média é {}' .format(soma))
+print('{} é a pessoa mais alta e tem {} de altura'.format(nome,maior))
+
+#Questão 9
+for f in range (100, 151):
+    c = (5/9) * (f - 32)
+    print("{}°F é {:.2f}°C. " .format(f, c))
+
+#Questão 10
+quant = par = ímpar = 0
+num = int(input("Número: "))
+
+while num != 0:
+    num = int(input("Número: "))
+    quant = quant + 1
+    if num % 2 == 0:
+        par = par + 1
+    if num % 2 == 1:
+        ímpar = ímpar + 1
+print('O total de números digitados foi de {}' .format(quant))
+print('A quantidade de números pares são {}' .format(par))
+print('A quantidade de números ímpares são {}' .format(ímpar))
+
+#Questão 11 
+massa = 0.0
+tempo = 0
+massa = float(input('Digite a massa: '))
+while massa >= 0.5:
+    massa = massa / 2
+    tempo = tempo + 50
+print('Massa: {} Tempo {}' .format(massa,tempo))
