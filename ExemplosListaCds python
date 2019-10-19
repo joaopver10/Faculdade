@@ -18,7 +18,7 @@ def listarCD(): # Aqui ira mostrar a lista de Cds
 def excluirCD(): # Aqui é outra função pra quando for o usuario decidir excluir um cd da lista
     nomeCD = input("Nome do CD que deseja excluir:") # recebe a opção 
     indice = -1 # para retirar o item da lista
-    encontrou = False 
+    encontrou = False # para organização foi utilizado um comando booleano.
     for elemento in listaCD: # Quando o item for encontrado ser excluido e o programa volta pra ver o que o usuario deseja de novo
         indice += 1
         if elemento == nomeCD:
@@ -29,7 +29,7 @@ def excluirCD(): # Aqui é outra função pra quando for o usuario decidir exclu
 
 while True:  # Aqui enquanto o programa receber as opções digitada ira rodar e o resto do programa ira trabalhar, se ele decidir sair o programa para
     opcao = exibirMenu()
-    if opcao == 4:
+    if opcao == 4: #condições recebidas e processadas pelos comandos
         break
     elif opcao == 3:
         listarCD()
