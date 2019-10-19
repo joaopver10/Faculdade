@@ -1,0 +1,39 @@
+listaCD = [] # Lista vazia que vai receber os dados 
+def exibirMenu(): # Aqui é definida a função que ira aperecer toda vez a não ser que seja colocado a opção sair
+    print("1 - Inserir novo CD")  # Print mostra pro usuario as opções 
+    print("2 - Excluir CD")
+    print("3 - Listar CDs")
+    print("4 - Sair")
+    opcao = int(input("Escolha uma opcao: ")) #Recebe a opção escolhida do usuario
+    return opcao #Depois que o programa chega ao final ele retorna para essa opção, a não ser que o usuario digite sair 
+
+def inserirCD():   # Aqui é uma função para que toda vez que o usuario escolher inserir um novo cd, ira pedir para colocar um nome e sera adicionado na lista
+    novoCD = input("Digite o nome do Artista: ") #recebe o dado digitado pelo usuario 
+    listaCD.append(novoCD) #adiciona na lista o nome do artista
+
+def listarCD(): # Aqui ira mostrar a lista de Cds
+    for elemento in listaCD:
+        print (elemento)
+
+def excluirCD(): # Aqui é outra função pra quando for o usuario decidir excluir um cd da lista
+    nomeCD = input("Nome do CD que deseja excluir:") # recebe a opção 
+    indice = -1 # para retirar o item da lista
+    encontrou = False 
+    for elemento in listaCD: # É dado para quando o item for encontrado ser excluido e o programa volta pra ver o que o usuario deseja de novo
+        indice += 1
+        if elemento == nomeCD:
+            encontrou = True
+            break
+    if (encontrou):
+        del listaCD[indice]
+
+while True:  # Aqui enquanto o usuario for adicionando coisas o programa ira rodar, se ele decidir sair o programa para
+    opcao = exibirMenu()
+    if opcao == 4:
+        break
+    elif opcao == 3:
+        listarCD()
+    elif opcao == 1:
+        inserirCD()
+    elif opcao == 2:
+        excluirCD()
