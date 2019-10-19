@@ -19,7 +19,7 @@ def excluirCD(): # Aqui é outra função pra quando for o usuario decidir exclu
     nomeCD = input("Nome do CD que deseja excluir:") # recebe a opção 
     indice = -1 # para retirar o item da lista
     encontrou = False 
-    for elemento in listaCD: # É dado para quando o item for encontrado ser excluido e o programa volta pra ver o que o usuario deseja de novo
+    for elemento in listaCD: # Quando o item for encontrado ser excluido e o programa volta pra ver o que o usuario deseja de novo
         indice += 1
         if elemento == nomeCD:
             encontrou = True
@@ -27,7 +27,7 @@ def excluirCD(): # Aqui é outra função pra quando for o usuario decidir exclu
     if (encontrou):
         del listaCD[indice]
 
-while True:  # Aqui enquanto o usuario for adicionando coisas o programa ira rodar, se ele decidir sair o programa para
+while True:  # Aqui enquanto o programa receber as opções digitada ira rodar e o resto do programa ira trabalhar, se ele decidir sair o programa para
     opcao = exibirMenu()
     if opcao == 4:
         break
