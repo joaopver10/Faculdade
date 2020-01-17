@@ -12,7 +12,47 @@ print('-' * 40)
 print('Lista dos maiores de 1,70')
 print('-' * 40)
 print(lista)'''
- 
+
+# Questão 2
+
+listmatricul= []
+listsalbrut= []
+listdescont= []
+listsalliqui= []
+for c in range (0,2):
+
+    listmatricul.append(int(input('Digite a matrícula: ')))
+    listsalbrut.append(float(input('Digite o salário: ')))
+    listdescont.append((listsalbrut[c] * 11) / 100)
+    listsalliqui.append(listsalbrut[c] - listdescont[c])
+    
+print(f'As matrículas são : {listmatricul}')
+print(f'Os salários brutos são : {listsalbrut}')
+print(f'O desconto para cada salário foi de: {listdescont}')
+print(f'O salário Liquido de cada empregado foi : {listsalliqui}')
+
+
+# Questão 3
+
+listcod = []
+listnom = []
+listtel = []
+
+for c in range(0, 2):
+    listcod.append(input('Código: '))
+    listnom.append(str(input('Nome: ')))
+    listtel.append(int(input('Telefone: ')))
+
+while True:
+    p = input('Digite um código para pesquisa : ')
+    if p in listcod:
+        c=listcod.index(p)
+        print(listnom[c], listtel[c])
+    else:
+        print('Este código não foi encontrado')
+    s = input('Quer continuar?' )
+    if s in "Nn":
+        break
  
 # Questão 4
 
